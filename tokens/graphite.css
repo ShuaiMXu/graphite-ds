@@ -1,0 +1,24 @@
+/* 由 graphite.json 派生。改色改 JSON，不要直接改这里。 */
+:root{
+  --ground:#FFFFFF; --surface:#FFFFFF; --sunk:#FAFAFA; --tagbg:#F4F4F5; --rule:#E4E4E7;
+  --ink:#27272A; --ink-2:#3F3F46; --body:#52525B; --muted:#71717A; --faint:#A1A1AA;
+  --accent:#F97316;          /* 排版：下划线、竖条 */
+  --accent-graphic:#EA580C;  /* 图表与图形：过 3:1 门槛 */
+  --accent-tint:rgba(249,115,22,.08);
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#121214; --surface:#18181B; --sunk:#1B1B1F; --tagbg:#27272A; --rule:#2C2C31;
+    --ink:#FAFAFA; --ink-2:#E4E4E7; --body:#A1A1AA; --muted:#8B8B93; --faint:#6B6B73;
+    --accent:#FB923C; --accent-graphic:#FB923C; --accent-tint:rgba(251,146,60,.10);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#121214; --surface:#18181B; --sunk:#1B1B1F; --tagbg:#27272A; --rule:#2C2C31;
+  --ink:#FAFAFA; --ink-2:#E4E4E7; --body:#A1A1AA; --muted:#8B8B93; --faint:#6B6B73;
+  --accent:#FB923C; --accent-graphic:#FB923C; --accent-tint:rgba(251,146,60,.10);
+}
+body{background:var(--ground);color:var(--body);font-family:var(--sans);
+     font-size:15px;line-height:1.8;letter-spacing:.3px;}

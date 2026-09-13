@@ -1,0 +1,52 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "$description": "石墨极简 token 正本。DTCG 格式，可直接转 DESIGN.md frontmatter、Tailwind theme 或 Figma variables。改色只改这里。",
+  "meta": {
+    "name": "Graphite Minimal",
+    "cn": "石墨极简",
+    "logic": "mono+accent",
+    "$description": "灰阶承载信息层级，单一暖橙标唯一焦点。灰取 Tailwind Zinc 冷阶。"
+  },
+  "color": {
+    "light": {
+      "ground":   { "$type": "color", "$value": "#FFFFFF", "$description": "正文底" },
+      "surface":  { "$type": "color", "$value": "#FFFFFF", "$description": "卡片底" },
+      "sunk":     { "$type": "color", "$value": "#FAFAFA", "$description": "引用块 / 提示块 / 图表卡底" },
+      "tagbg":    { "$type": "color", "$value": "#F4F4F5", "$description": "关键词标签底" },
+      "rule":     { "$type": "color", "$value": "#E4E4E7", "$description": "分割线 / 边框 / 水印编号" },
+      "ink":      { "$type": "color", "$value": "#27272A", "$description": "标题、最深数据" },
+      "ink2":     { "$type": "color", "$value": "#3F3F46", "$description": "深灰强调" },
+      "body":     { "$type": "color", "$value": "#52525B", "$description": "正文、下划线" },
+      "muted":    { "$type": "color", "$value": "#71717A", "$description": "次要文字、次级数据" },
+      "faint":    { "$type": "color", "$value": "#A1A1AA", "$description": "署名 / 编号小字 / 最浅数据" }
+    },
+    "dark": {
+      "ground":   { "$type": "color", "$value": "#121214" },
+      "surface":  { "$type": "color", "$value": "#18181B" },
+      "sunk":     { "$type": "color", "$value": "#1B1B1F" },
+      "tagbg":    { "$type": "color", "$value": "#27272A" },
+      "rule":     { "$type": "color", "$value": "#2C2C31" },
+      "ink":      { "$type": "color", "$value": "#FAFAFA" },
+      "ink2":     { "$type": "color", "$value": "#E4E4E7" },
+      "body":     { "$type": "color", "$value": "#A1A1AA" },
+      "muted":    { "$type": "color", "$value": "#8B8B93" },
+      "faint":    { "$type": "color", "$value": "#6B6B73" }
+    },
+    "accent": {
+      "prose":    { "$type": "color", "$value": "#F97316", "$description": "正文排版用（下划线、竖条）。全篇 ≤3 处" },
+      "graphic":  { "$type": "color", "$value": "#EA580C", "$description": "图表与图形用。prose 值在浅底上只有 2.70:1，过不了 3:1 图形门槛" },
+      "dark":     { "$type": "color", "$value": "#FB923C", "$description": "深色底用。8.09:1 on #18181B" }
+    }
+  },
+  "typography": {
+    "$description": "系统字体栈，不加载网络字体。CJK 由系统解析。",
+    "family": { "$type": "fontFamily", "$value": ["-apple-system", "BlinkMacSystemFont", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "sans-serif"] },
+    "mono":   { "$type": "fontFamily", "$value": ["ui-monospace", "SF Mono", "Menlo", "Consolas", "monospace"] },
+    "body":   { "$type": "typography", "$value": { "fontSize": "15px", "lineHeight": 1.8, "letterSpacing": "0.3px" } },
+    "cjkFloor": { "$type": "dimension", "$value": "12px", "$description": "中文最小字号。等宽小标签槽位遇 CJK 一律升到此值并改用 sans" }
+  },
+  "layout": {
+    "sectionGap": { "$type": "dimension", "$value": "56px" },
+    "proseWidth": { "$type": "dimension", "$value": "677px", "$description": "公众号载体宽度。网页载体可放宽外壳，正文测量宽度保持在此附近" }
+  }
+}
